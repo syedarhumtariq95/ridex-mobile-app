@@ -1,0 +1,55 @@
+name: ridex_mobile_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^9.0.0
+  flutter_screenutil: ^5.9.3
+  get_it: ^8.0.3
+  intl: ^0.20.2
+  responsive_framework: ^1.4.0
+  sqflite: ^2.3.3+1
+  animations: ^2.0.11
+  flutter_svg: ^2.2.0
+  dio: ^5.9.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo/logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/logo/logo.png"
+
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
+    - assets/images/onboarding/
+    - assets/logo/
