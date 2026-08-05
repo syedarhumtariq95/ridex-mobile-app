@@ -21,4 +21,33 @@ class CustomTexts {
   static String get yourride => _locale?.yourride ?? "yourride";
   static String get getstarted => _locale?.getstarted ?? "getstarted";
   static String get continueasguest => _locale?.continueasguest ?? "continueasguest";
+  static String get affordable => _locale?.affordable ?? "affordable";
+  static String get prices => _locale?.prices ?? "prices";
+  static String get bookride => _locale?.bookride ?? "bookride";
+  static String get next => _locale?.next ?? "next";
+  static String get getpickup => _locale?.getpickup ?? "getpickup";
+  static String get fastpickup => _locale?.fastpickup ?? "fastpickup";
+  static String get travelsafely => _locale?.travelsafely ?? "travelsafely";
+  static String get safejourney => _locale?.safejourney ?? "safejourney";
+  static String get finish => _locale?.finish ?? "finish";
+  static String get createaccount => _locale?.createaccount ?? "createaccount";
+  static String get signuptogetstarted => _locale?.signuptogetstarted ?? "signuptogetstarted";
+  static String get enteryourfirstname => _locale?.enteryourfirstname ?? "enteryourfirstname";
+  static String get firstname => _locale?.firstname ?? "firstname";
+
+  static String get enteryourlastname => _locale?.enteryourlastname ?? "enteryourlastname";
+  static String get lastname => _locale?.lastname ?? "lastname";
+  static String get email => _locale?.email ?? "email";
+  static String get enteremail => _locale?.enteremail ?? "enteremail";
+  static String get password => _locale?.password ?? "password";
+  static String get confirmpassword => _locale?.confirmpassword ?? "confirmpassword";
+  static String get hint => _locale?.hint ?? "hint";
+  static String get already => _locale?.already ?? "already";
+  static String get login => _locale?.login ?? "login";
+  static String get welcome => _locale?.welcome ?? "welcome";
+  static String get logintocontinue => _locale?.logintocontinue ?? "logintocontinue";
+  static String get emailaddress => _locale?.emailaddress ?? "emailaddress";
+  static String get forgotpassword => _locale?.forgotpassword ?? "forgotpassword";
+  static String get donthave => _locale?.donthave ?? "donthave";
+  static String get signup => _locale?.signup ?? "signup";
 }

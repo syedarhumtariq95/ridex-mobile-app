@@ -4,7 +4,50 @@
   "x": "X",
   "yourride": "Your ride, your way",
   "getstarted": "Get Started",
-  "continueasguest": "Continue as Guest"
+  "continueasguest": "Continue as Guest",
+  "affordable": "Affordable Rides",
+  "bookride": "Book rides at the best prices in your city",
+  "prices": "Prices in your city",
+  "next": "Next",
+  "finish": "finish",
+
+  "fastpickup": "Fast Pickup",
+  "getpickup": "Get picked up quickly anywhere.",
+
+  "safejourney": "Safe Journey",
+  "travelsafely": "Travel safely with trusted drivers.",
+
+  "createaccount": "Create Account",
+  "signuptogetstarted": "Sign Up to get started",
+
+  "firstname": "First Name",
+  "enteryourfirstname": "Enter your first name",
+
+   "lastname": "last Name",
+    "enteryourlastname": "Enter your last name",
+
+    "email": "Email",
+    "enteremail": "name@gmail.com",
+
+    "password": "Password",
+    "hint" : "******",
+    "confirmpassword": "Confirm Password",
+
+    "already": "Already have an account?",
+    "login": "Login",
+
+    "welcome": "Welcome!",
+    "logintocontinue": "Login to continue",
+    "emailaddress": "Email Address",
+    "forgotpassword": "Forgot Password?",
+    "donthave": "Don't have an account?",
+    "signup": "Sign Up"
+
+
+
+
+
+
 
 
 

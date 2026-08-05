@@ -25,8 +25,7 @@ class CustomIcons extends StatelessWidget {
       height: size,
       semanticsLabel: semanticLabel,
 
-      // Agar color diya gaya hai to wahi lagega,
-      // warna SVG ka original color use hoga.
+
       colorFilter: color != null
           ? ColorFilter.mode(
         color!,
@@ -54,10 +53,34 @@ class CustomIconsPath {
 
   static const String calendar = 'calendar.svg';
   static const String car = 'car.svg';
+  static const String rental = 'rental.svg';
+  static const String fast = 'fast.svg';
+  static const String safe = 'safe.svg';
+  static const String profile = 'profile.svg';
+  static const String email = 'email.svg';
+  static const String lock = 'lock.svg';
 
   static String get calendarPath =>
       '$folderAssets/$folderIcons/$calendar';
 
   static String get carPath =>
       '$folderAssets/$folderIcons/$car';
+
+  static String get rentalPath =>
+      '$folderAssets/$folderIcons/$rental';
+
+  static String get fastPath =>
+      '$folderAssets/$folderIcons/$fast';
+
+  static String get safePath =>
+      '$folderAssets/$folderIcons/$safe';
+
+  static String get profilePath =>
+      '$folderAssets/$folderIcons/$profile';
+
+  static String get emailPath =>
+      '$folderAssets/$folderIcons/$email';
+
+  static String get lockPath =>
+      '$folderAssets/$folderIcons/$lock';
 }

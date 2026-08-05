@@ -122,6 +122,174 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Continue as Guest'**
   String get continueasguest;
+
+  /// No description provided for @affordable.
+  ///
+  /// In en, this message translates to:
+  /// **'Affordable Rides'**
+  String get affordable;
+
+  /// No description provided for @bookride.
+  ///
+  /// In en, this message translates to:
+  /// **'Book rides at the best prices in your city'**
+  String get bookride;
+
+  /// No description provided for @prices.
+  ///
+  /// In en, this message translates to:
+  /// **'Prices in your city'**
+  String get prices;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @finish.
+  ///
+  /// In en, this message translates to:
+  /// **'finish'**
+  String get finish;
+
+  /// No description provided for @fastpickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast Pickup'**
+  String get fastpickup;
+
+  /// No description provided for @getpickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Get picked up quickly anywhere.'**
+  String get getpickup;
+
+  /// No description provided for @safejourney.
+  ///
+  /// In en, this message translates to:
+  /// **'Safe Journey'**
+  String get safejourney;
+
+  /// No description provided for @travelsafely.
+  ///
+  /// In en, this message translates to:
+  /// **'Travel safely with trusted drivers.'**
+  String get travelsafely;
+
+  /// No description provided for @createaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createaccount;
+
+  /// No description provided for @signuptogetstarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up to get started'**
+  String get signuptogetstarted;
+
+  /// No description provided for @firstname.
+  ///
+  /// In en, this message translates to:
+  /// **'First Name'**
+  String get firstname;
+
+  /// No description provided for @enteryourfirstname.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your first name'**
+  String get enteryourfirstname;
+
+  /// No description provided for @lastname.
+  ///
+  /// In en, this message translates to:
+  /// **'last Name'**
+  String get lastname;
+
+  /// No description provided for @enteryourlastname.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your last name'**
+  String get enteryourlastname;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @enteremail.
+  ///
+  /// In en, this message translates to:
+  /// **'name@gmail.com'**
+  String get enteremail;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @hint.
+  ///
+  /// In en, this message translates to:
+  /// **'******'**
+  String get hint;
+
+  /// No description provided for @confirmpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Password'**
+  String get confirmpassword;
+
+  /// No description provided for @already.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get already;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome!'**
+  String get welcome;
+
+  /// No description provided for @logintocontinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to continue'**
+  String get logintocontinue;
+
+  /// No description provided for @emailaddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get emailaddress;
+
+  /// No description provided for @forgotpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password?'**
+  String get forgotpassword;
+
+  /// No description provided for @donthave.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account?'**
+  String get donthave;
+
+  /// No description provided for @signup.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signup;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

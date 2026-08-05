@@ -6,6 +6,8 @@ import 'package:ridex_mobile_app/src/configs/theme/theme_colors.dart';
 
 import '../../../../configs/app/fonts_configs.dart';
 import '../../../../configs/button/custom_button_second.dart';
+import '../../../../configs/router/routes.dart';
+import '../../../../configs/router/screen_navigation_service.dart';
 import '../../../../configs/texts/texts.dart';
 import '../../../generics/widgets/text/custom_text.dart';
 
@@ -57,7 +59,12 @@ class SplashScreen extends StatelessWidget {
             SizedBox(height: 0.01.sh),
             CustomIcons(iconPath: CustomIconsPath.carPath),
             SizedBox(height: 0.06.sh),
-            CustomButton(text: CustomTexts.getstarted, onPressed: () {}),
+            CustomButton(text: CustomTexts.getstarted, onPressed: () {
+              ScreenNavigationService.navigationPush(
+                CustomRouter.onboardingScreenRouteName,
+                replacement: false,
+              );
+            }),
             SizedBox(height: 0.02.sh),
             CustomButtonSecond(text: CustomTexts.continueasguest, onPressed: () {}),
           ],
