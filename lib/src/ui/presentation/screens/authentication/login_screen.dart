@@ -90,7 +90,12 @@ class LoginScreen extends StatelessWidget {
               ),
 
               SizedBox(height: 0.06.sh),
-              Center(child: CustomButton(text: CustomTexts.login, onPressed: () {})),
+              Center(child: CustomButton(text: CustomTexts.login, onPressed: () {
+                ScreenNavigationService.navigationPush(
+                  CustomRouter.homeScreenRouteName,
+                  replacement: false,
+                );
+              })),
               SizedBox(height: 0.02.sh),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

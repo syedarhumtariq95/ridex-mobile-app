@@ -1,20 +1,12 @@
 class CustomImagesPath {
   CustomImagesPath._();
 
-  ///Folders
-  final String folderAssets = 'assets';
-  final String folderImages = 'images';
-  final String folderHome = 'home';
-  final String folderLogo = 'logo';
-  final String folderOnboarding = 'onboarding';
+  static const String folderAssets = 'assets';
+  static const String folderImages = 'images';
+  static const String folderHome = 'home';
 
-  ///IconNames
-  final String logo = 'logo.png';
-  final String onboarding = 'onboarding.png';
+  static const String map = 'map.png';
 
-  ///Getters for custom images
-  String get logoImagePath => '$folderAssets/$folderLogo/$logo';
-
-  String get onboardingImagePath =>
-      '$folderAssets/$folderImages/$folderOnboarding/$onboarding';
+  static String get mapImagePath =>
+      '$folderAssets/$folderImages/$folderHome/$map';
 }

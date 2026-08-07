@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/authentication/signup_screen.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/home/home_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/splash/onboarding_screen.dart';
 
 import '../../ui/presentation/screens/authentication/login_screen.dart';
@@ -19,6 +20,7 @@ class CustomRouter {
   static const String onboardingScreenRouteName = 'onboardingScreen';
   static const String signUpScreenRouteName = 'signupScreen';
   static const String loginScreenRouteName = 'loginScreen';
+  static const String homeScreenRouteName = 'homeScreen';
 
   /// A map of route names to their corresponding widget builders.
   ///
@@ -30,5 +32,6 @@ class CustomRouter {
     onboardingScreenRouteName: (BuildContext context) => OnboardingScreen(),
     signUpScreenRouteName: (BuildContext context) => SignupScreen(),
     loginScreenRouteName: (BuildContext context) => LoginScreen(),
+    homeScreenRouteName: (BuildContext context) => HomeScreen(),
   };
 }
