@@ -59,6 +59,11 @@ class CustomIconsPath {
   static const String profile = 'profile.svg';
   static const String email = 'email.svg';
   static const String lock = 'lock.svg';
+  static const String menu = 'menu.svg';
+  static const String search = 'search.svg';
+  static const String location = 'location.svg';
+  static const String work = 'work.svg';
+  static const String mall = 'mall.svg';
 
   static String get calendarPath =>
       '$folderAssets/$folderIcons/$calendar';
@@ -83,4 +88,19 @@ class CustomIconsPath {
 
   static String get lockPath =>
       '$folderAssets/$folderIcons/$lock';
+
+  static String get menuPath =>
+      '$folderAssets/$folderIcons/$menu';
+
+  static String get searchPath =>
+      '$folderAssets/$folderIcons/$search';
+
+  static String get locationPath =>
+      '$folderAssets/$folderIcons/$location';
+
+  static String get workPath =>
+      '$folderAssets/$folderIcons/$work';
+
+  static String get mallPath =>
+      '$folderAssets/$folderIcons/$mall';
 }

@@ -290,6 +290,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sign Up'**
   String get signup;
+
+  /// No description provided for @whereto.
+  ///
+  /// In en, this message translates to:
+  /// **'Where to?'**
+  String get whereto;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @lahore.
+  ///
+  /// In en, this message translates to:
+  /// **'123 Main Sport, Lahore'**
+  String get lahore;
+
+  /// No description provided for @work.
+  ///
+  /// In en, this message translates to:
+  /// **'Work'**
+  String get work;
+
+  /// No description provided for @software.
+  ///
+  /// In en, this message translates to:
+  /// **'Arfa Software Technology Park'**
+  String get software;
+
+  /// No description provided for @recent.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Places'**
+  String get recent;
+
+  /// No description provided for @mall.
+  ///
+  /// In en, this message translates to:
+  /// **'Packages Mall'**
+  String get mall;
+
+  /// No description provided for @emporium.
+  ///
+  /// In en, this message translates to:
+  /// **'Emporium Mall'**
+  String get emporium;
+
+  /// No description provided for @pickup.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup Location'**
+  String get pickup;
+
+  /// No description provided for @gulberg.
+  ///
+  /// In en, this message translates to:
+  /// **'Gulberg 3, Lahore'**
+  String get gulberg;
+
+  /// No description provided for @drop.
+  ///
+  /// In en, this message translates to:
+  /// **'Drop Location'**
+  String get drop;
+
+  /// No description provided for @confirmlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Location'**
+  String get confirmlocation;
+
+  /// No description provided for @choosearide.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a ride'**
+  String get choosearide;
+
+  /// No description provided for @confirmride.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm ride'**
+  String get confirmride;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

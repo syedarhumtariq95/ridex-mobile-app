@@ -106,4 +106,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get signup => 'Sign Up';
+
+  @override
+  String get whereto => 'Where to?';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get lahore => '123 Main Sport, Lahore';
+
+  @override
+  String get work => 'Work';
+
+  @override
+  String get software => 'Arfa Software Technology Park';
+
+  @override
+  String get recent => 'Recent Places';
+
+  @override
+  String get mall => 'Packages Mall';
+
+  @override
+  String get emporium => 'Emporium Mall';
+
+  @override
+  String get pickup => 'Pickup Location';
+
+  @override
+  String get gulberg => 'Gulberg 3, Lahore';
+
+  @override
+  String get drop => 'Drop Location';
+
+  @override
+  String get confirmlocation => 'Confirm Location';
+
+  @override
+  String get choosearide => 'Choose a ride';
+
+  @override
+  String get confirmride => 'Confirm ride';
 }

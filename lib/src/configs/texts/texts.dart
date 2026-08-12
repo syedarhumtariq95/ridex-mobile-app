@@ -50,4 +50,18 @@ class CustomTexts {
   static String get forgotpassword => _locale?.forgotpassword ?? "forgotpassword";
   static String get donthave => _locale?.donthave ?? "donthave";
   static String get signup => _locale?.signup ?? "signup";
+  static String get whereto => _locale?.whereto ?? "whereto";
+  static String get home => _locale?.home ?? "home";
+  static String get lahore => _locale?.lahore ?? "lahore";
+  static String get work => _locale?.work ?? "work";
+  static String get software => _locale?.software ?? "software";
+  static String get recent => _locale?.recent ?? "recent";
+  static String get mall => _locale?.mall ?? "mall";
+  static String get emporium => _locale?.emporium ?? "emporium";
+  static String get pickup => _locale?.pickup ?? "pickup";
+  static String get gulberg => _locale?.gulberg ?? "gulberg";
+  static String get drop => _locale?.drop ?? "drop";
+  static String get confirmlocation => _locale?.confirmlocation ?? "confirmlocation";
+  static String get choosearide => _locale?.choosearide ?? "choosearide";
+  static String get confirmride => _locale?.confirmride ?? "confirmride";
 }

@@ -41,7 +41,26 @@
     "emailaddress": "Email Address",
     "forgotpassword": "Forgot Password?",
     "donthave": "Don't have an account?",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+
+     "whereto": "Where to?",
+
+     "home": "Home",
+     "lahore": "123 Main Sport, Lahore",
+     "work": "Work",
+     "software": "Arfa Software Technology Park",
+
+     "recent": "Recent Places",
+     "mall": "Packages Mall",
+     "emporium": "Emporium Mall",
+
+     "pickup": "Pickup Location",
+     "gulberg": "Gulberg 3, Lahore",
+     "drop": "Drop Location",
+     "confirmlocation": "Confirm Location",
+
+     "choosearide": "Choose a ride",
+     "confirmride": "Confirm ride"
 
 
 

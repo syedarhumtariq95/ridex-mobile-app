@@ -1,76 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../configs/images/images.dart';
-import '../../../../configs/theme/theme_colors.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/home/widgets/home_map_widget.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/home/widgets/recent_places_widget.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/home/widgets/saved_places_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      body: Stack(
-        children: [
-          /// Background Map Image
-          SizedBox(
-            width: double.infinity,
-            height: 0.4.sh,
-            child: Image.asset(
-              CustomImagesPath.mapImagePath,
-              fit: BoxFit.cover,
-            ),
-          ),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /// Map + Top Buttons + Where To
+            HomeMapWidget(),
 
+            /// Saved Places
+            SavedPlacesWidget(),
 
-          SafeArea(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 0.05.sw,
-                vertical: 0.02.sh,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 0.06.sh,
-                    width: 0.13.sw,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16.r),
-                      border: Border.all(
-                        color: ThemeColors.kFontGreyColor,
-                        width: 1,
-                      ),
-                    ),
-                    child: const Center(
-                      child: Icon(Icons.menu),
-                    ),
-                  ),
-
-                  Container(
-                    height: 0.06.sh,
-                    width: 0.13.sw,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16.r),
-                      border: Border.all(
-                        color: ThemeColors.kBorderGreyColor,
-                        width: 1,
-                      ),
-                    ),
-                    child: const Center(
-                      child: Icon(Icons.notifications),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-
-        ],
+            /// Recent Places
+            RecentPlacesWidget(),
+          ],
+        ),
       ),
     );
   }
