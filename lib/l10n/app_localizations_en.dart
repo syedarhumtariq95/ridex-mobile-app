@@ -148,4 +148,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get confirmride => 'Confirm ride';
+
+  @override
+  String get findingyouadriver => 'Finding you a driver';
+
+  @override
+  String get thismaytakeafewseconds => 'This may take a few seconds';
+
+  @override
+  String get cancelride => 'Cancel Ride';
 }

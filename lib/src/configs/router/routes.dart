@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/authentication/signup_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/findingDriver/finding_driver_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/home/home_screen.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/liveTracking/live_tracking_screen.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/myRideScreen/my_rides_screen.dart';
+import 'package:ridex_mobile_app/src/ui/presentation/screens/rideCompleted/ride_completed_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/rideOption/ride_option_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/selectLocation/select_location_screen.dart';
 import 'package:ridex_mobile_app/src/ui/presentation/screens/splash/onboarding_screen.dart';
@@ -27,6 +30,9 @@ class CustomRouter {
   static const String selectLocationScreenRouteName = 'selectLocationScreen';
   static const String rideOptionScreenRouteName = 'rideOptionScreen';
   static const String findingDriverScreenRouteName = 'findingDriverScreen';
+  static const String liveTrackingScreenRouteName = 'liveTrackingScreen';
+  static const String rideCompletedScreenRouteName = 'rideCompletedScreen';
+  static const String myRidesScreenRouteName = 'myRidesScreen';
 
   /// A map of route names to their corresponding widget builders.
   ///
@@ -39,8 +45,14 @@ class CustomRouter {
     signUpScreenRouteName: (BuildContext context) => SignupScreen(),
     loginScreenRouteName: (BuildContext context) => LoginScreen(),
     homeScreenRouteName: (BuildContext context) => HomeScreen(),
-    selectLocationScreenRouteName: (BuildContext context) => SelectLocationScreen(),
+    selectLocationScreenRouteName: (BuildContext context) =>
+        SelectLocationScreen(),
     rideOptionScreenRouteName: (BuildContext context) => RideOptionScreen(),
-    findingDriverScreenRouteName: (BuildContext context) => FindingDriverScreen(),
+    findingDriverScreenRouteName: (BuildContext context) =>
+        FindingDriverScreen(),
+    liveTrackingScreenRouteName: (BuildContext context) => LiveTrackingScreen(),
+    rideCompletedScreenRouteName: (BuildContext context) =>
+        RideCompletedScreen(),
+    myRidesScreenRouteName: (BuildContext context) => MyRidesScreen(),
   };
 }

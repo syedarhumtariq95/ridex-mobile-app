@@ -374,6 +374,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Confirm ride'**
   String get confirmride;
+
+  /// No description provided for @findingyouadriver.
+  ///
+  /// In en, this message translates to:
+  /// **'Finding you a driver'**
+  String get findingyouadriver;
+
+  /// No description provided for @thismaytakeafewseconds.
+  ///
+  /// In en, this message translates to:
+  /// **'This may take a few seconds'**
+  String get thismaytakeafewseconds;
+
+  /// No description provided for @cancelride.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Ride'**
+  String get cancelride;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

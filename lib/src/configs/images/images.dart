@@ -6,11 +6,13 @@ class CustomImagesPath {
   static const String folderHome = 'home';
   static const String folderSelectLocation = 'selectlocation';
   static const String folderRideOption = 'rideoption';
+  static const String folderLiveTracking = 'livetracking';
 
   static const String map = 'map.png';
   static const String maplocation = 'maplocation.png';
   static const String economy = 'economy.png';
   static const String bike = 'bike.png';
+  static const String aliraza = 'aliraza.jpg';
 
   static String get mapImagePath =>
       '$folderAssets/$folderImages/$folderHome/$map';
@@ -22,4 +24,7 @@ class CustomImagesPath {
 
   static String get bikeImagePath =>
       '$folderAssets/$folderImages/$folderRideOption/$bike';
+
+  static String get alirazaImagePath =>
+      '$folderAssets/$folderImages/$folderLiveTracking/$aliraza';
 }

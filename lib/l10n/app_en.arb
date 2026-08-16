@@ -60,7 +60,12 @@
      "confirmlocation": "Confirm Location",
 
      "choosearide": "Choose a ride",
-     "confirmride": "Confirm ride"
+     "confirmride": "Confirm ride",
+
+     "findingyouadriver": "Finding you a driver",
+     "thismaytakeafewseconds": "This may take a few seconds",
+     "cancelride": "Cancel Ride"
+
 
 
 
