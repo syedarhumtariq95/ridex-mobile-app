@@ -11,6 +11,7 @@ class ThemeColors {
   static const Color kFontGreyColor = Color(0xFF606380);
   static const Color kBorderGreyColor = Color(0xFFBCBCBC);
   static const Color kButtonLightGreyColor = Color(0xFFEEEEF3);
+  static const Color kFontPurpleColor = Color(0xFF8B00EC);
 
 
 

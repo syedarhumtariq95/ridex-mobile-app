@@ -124,7 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 );
               }
               ScreenNavigationService.navigationPush(
-                CustomRouter.signUpScreenRouteName,
+                CustomRouter.chooseAccountTypeScreenRouteName,
                 replacement: false,
               );
             },

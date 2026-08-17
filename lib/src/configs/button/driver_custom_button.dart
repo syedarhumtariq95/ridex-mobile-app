@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ridex_mobile_app/src/configs/theme/theme_colors.dart';
 
-class CustomButtonSecond extends StatelessWidget {
-  const CustomButtonSecond({
+class DriverCustomButton extends StatelessWidget {
+  const DriverCustomButton({
     super.key,
     required this.text,
     required this.onPressed,
     this.width,
     this.height,
-    this.color = ThemeColors.kButtonLightGreyColor,
-    this.textColor = ThemeColors.kFontBlackColor,
+    this.color = ThemeColors.kFontPurpleColor,
+    this.textColor = Colors.white,
     this.borderRadius,
     this.fontSize,
     this.fontWeight = FontWeight.w600,
