@@ -64,7 +64,12 @@
 
      "findingyouadriver": "Finding you a driver",
      "thismaytakeafewseconds": "This may take a few seconds",
-     "cancelride": "Cancel Ride"
+     "cancelride": "Cancel Ride",
+
+     "fullname": "Full Name",
+     "enterfullname": "Enter Full Name",
+     "phonenumber": "Phone Number",
+     "enterphonenumber": "Enter Phone Number"
 
 
 

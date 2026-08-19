@@ -4,7 +4,7 @@ import 'package:ridex_mobile_app/src/ui/presentation/screens/home/widgets/recent
 import 'package:ridex_mobile_app/src/ui/presentation/screens/home/widgets/saved_places_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ridex_mobile_app/src/configs/icons/icons.dart';
 import 'package:ridex_mobile_app/src/configs/theme/theme_colors.dart';
 
-class DriverCustomTextField extends StatelessWidget {
-  final String label;
-  final String hintText;
-  final String? prefixIcon;
+class CustomPhoneField extends StatelessWidget {
   final TextEditingController? controller;
-  final TextInputType keyboardType;
 
-  const DriverCustomTextField({
+  const CustomPhoneField({
     super.key,
-    required this.label,
-    required this.hintText,
-    this.prefixIcon,
     this.controller,
-    this.keyboardType = TextInputType.text,
   });
 
   @override
@@ -27,7 +20,7 @@ class DriverCustomTextField extends StatelessWidget {
 
         /// Label
         Text(
-          label,
+          'Phone Number',
           style: TextStyle(
             fontSize: 14.sp,
             fontWeight: FontWeight.w500,
@@ -37,30 +30,62 @@ class DriverCustomTextField extends StatelessWidget {
 
         SizedBox(height: 8.h),
 
-        /// Text Field
+        /// Phone Text Field
         TextField(
           controller: controller,
-          keyboardType: keyboardType,
+          keyboardType: TextInputType.phone,
 
           decoration: InputDecoration(
-            hintText: hintText,
+            hintText: 'Enter your phone number',
 
             hintStyle: TextStyle(
               fontSize: 14.sp,
               color: ThemeColors.kFontGreyColor,
             ),
 
-            /// Prefix Icon
-            prefixIcon: prefixIcon != null
-                ? Padding(
-              padding: EdgeInsets.all(12.w),
-              child: SvgPicture.asset(
-                prefixIcon!,
-                width: 16.w,
-                height: 16.h,
+            /// Phone Icon + Country Code
+            prefixIcon: Padding(
+              padding: EdgeInsets.only(
+                left: 12.w,
+                right: 8.w,
               ),
-            )
-                : null,
+
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+
+                  /// Phone Icon
+                  SvgPicture.asset(
+                    CustomIconsPath.phonePath,
+                    width: 16.w,
+                    height: 16.h,
+                  ),
+
+                  SizedBox(width: 8.w),
+
+                  /// Country Code
+                  Text(
+                    '+92',
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w500,
+                      color: ThemeColors.kFontBlackColor,
+                    ),
+                  ),
+
+                  SizedBox(width: 8.w),
+
+                  /// Divider
+                  Container(
+                    height: 24.h,
+                    width: 1,
+                    color: ThemeColors.kFontGreyColor,
+                  ),
+
+                  SizedBox(width: 8.w),
+                ],
+              ),
+            ),
 
             /// Normal Border
             border: OutlineInputBorder(
@@ -82,7 +107,7 @@ class DriverCustomTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12.r),
               borderSide: BorderSide(
-                color: ThemeColors.kFontPurpleColor,
+                color: ThemeColors.kFontGreenColor,
                 width: 1.5,
               ),
             ),

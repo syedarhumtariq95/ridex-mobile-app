@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ridex_mobile_app/src/configs/app/fonts_configs.dart';
-import 'package:ridex_mobile_app/src/configs/button/custom_button.dart';
 import 'package:ridex_mobile_app/src/configs/icons/icons.dart';
 import 'package:ridex_mobile_app/src/configs/router/routes.dart';
 import 'package:ridex_mobile_app/src/configs/router/screen_navigation_service.dart';
 import 'package:ridex_mobile_app/src/configs/texts/texts.dart';
 import 'package:ridex_mobile_app/src/configs/theme/theme_colors.dart';
-import 'package:ridex_mobile_app/src/ui/presentation/screens/Driver/screens/authentication/driverTextField/driver_custom_text_field.dart';
-import 'package:ridex_mobile_app/src/ui/presentation/screens/authentication/widgets/custom_password_field.dart';
-import 'package:ridex_mobile_app/src/ui/presentation/screens/authentication/widgets/custom_text_field.dart';
+import 'package:ridex_mobile_app/src/configs/app/fonts_configs.dart';
 
 import '../../../../../../configs/button/driver_custom_button.dart';
 import '../../../../../generics/widgets/text/custom_text.dart';
+import 'driverTextField/driver_custom_phone_field.dart';
+import 'driverTextField/driver_custom_text_field.dart';
 import 'driverTextField/driver_custom_password_field.dart';
-
 
 class DriverSignupScreen extends StatelessWidget {
   const DriverSignupScreen({super.key});
@@ -23,9 +20,11 @@ class DriverSignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 0.05.sw, vertical: 0.05.sh),
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,6 +43,7 @@ class DriverSignupScreen extends StatelessWidget {
 
               SizedBox(height: 0.01.sh),
 
+              /// Subtitle
               CustomText(
                 CustomTexts.signuptogetstarted,
                 style: TextStyle(
@@ -55,28 +55,31 @@ class DriverSignupScreen extends StatelessWidget {
 
               SizedBox(height: 0.04.sh),
 
+              /// Full Name
               DriverCustomTextField(
-                label: CustomTexts.firstname,
-                hintText: CustomTexts.enteryourfirstname,
+                label: CustomTexts.fullname,
+                hintText: CustomTexts.enterfullname,
                 prefixIcon: CustomIconsPath.profilePath,
               ),
+
               SizedBox(height: 0.03.sh),
 
-              DriverCustomTextField(
-                label: CustomTexts.lastname,
-                hintText: CustomTexts.lastname,
-                prefixIcon: CustomIconsPath.profilePath,
-              ),
+              /// Phone Number
+              DriverCustomPhoneField(),
+
               SizedBox(height: 0.03.sh),
 
+              /// Email
               DriverCustomTextField(
                 label: CustomTexts.email,
                 hintText: CustomTexts.enteremail,
                 prefixIcon: CustomIconsPath.emailPath,
+                keyboardType: TextInputType.emailAddress,
               ),
 
               SizedBox(height: 0.03.sh),
 
+              /// Password
               DriverCustomPasswordField(
                 label: CustomTexts.password,
                 hintText: CustomTexts.hint,
@@ -85,19 +88,28 @@ class DriverSignupScreen extends StatelessWidget {
 
               SizedBox(height: 0.03.sh),
 
+              /// Confirm Password
               DriverCustomPasswordField(
                 label: CustomTexts.confirmpassword,
                 hintText: CustomTexts.hint,
                 prefixIcon: CustomIconsPath.lockPath,
               ),
+
               SizedBox(height: 0.06.sh),
+
+              /// Get Started Button
               Center(
                 child: DriverCustomButton(
                   text: CustomTexts.getstarted,
-                  onPressed: () {},
+                  onPressed: () {
+                    // Signup logic will be added later
+                  },
                 ),
               ),
+
               SizedBox(height: 0.02.sh),
+
+              /// Login
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -119,6 +131,7 @@ class DriverSignupScreen extends StatelessWidget {
                         replacement: false,
                       );
                     },
+
                     child: CustomText(
                       CustomTexts.login,
                       style: TextStyle(

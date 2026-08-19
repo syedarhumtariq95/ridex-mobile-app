@@ -157,4 +157,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cancelride => 'Cancel Ride';
+
+  @override
+  String get fullname => 'Full Name';
+
+  @override
+  String get enterfullname => 'Enter Full Name';
+
+  @override
+  String get phonenumber => 'Phone Number';
+
+  @override
+  String get enterphonenumber => 'Enter Phone Number';
 }

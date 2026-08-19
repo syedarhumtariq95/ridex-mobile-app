@@ -4,10 +4,11 @@ import 'package:ridex_mobile_app/src/configs/icons/icons.dart';
 
 import '../../../../../configs/images/images.dart';
 import '../../../../../configs/theme/theme_colors.dart';
+import '../../userProfileScreen/user_profile_screen.dart';
 import 'location_search_widget.dart';
 
 class HomeMapWidget extends StatelessWidget {
-  HomeMapWidget({super.key});
+  const HomeMapWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +41,30 @@ class HomeMapWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   /// Menu Button
-                  Container(
-                    height: 0.06.sh,
-                    width: 0.13.sw,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16.r),
-                      border: Border.all(
-                        color: ThemeColors.kFontGreyColor,
-                        width: 1,
+                  /// Menu Button inside HomeMapWidget
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UserProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: 0.06.sh,
+                      width: 0.13.sw,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16.r),
+                        border: Border.all(
+                          color: ThemeColors.kFontGreyColor,
+                          width: 1,
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      child: CustomIcons(iconPath: CustomIconsPath.menuPath),
+                      child: Center(
+                        child: CustomIcons(iconPath: CustomIconsPath.menuPath),
+                      ),
                     ),
                   ),
 

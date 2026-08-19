@@ -392,6 +392,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cancel Ride'**
   String get cancelride;
+
+  /// No description provided for @fullname.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullname;
+
+  /// No description provided for @enterfullname.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Full Name'**
+  String get enterfullname;
+
+  /// No description provided for @phonenumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phonenumber;
+
+  /// No description provided for @enterphonenumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Phone Number'**
+  String get enterphonenumber;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

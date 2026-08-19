@@ -76,4 +76,8 @@ class CustomTexts {
   static String get thismaytakeafewseconds =>
       _locale?.thismaytakeafewseconds ?? "thismaytakeafewseconds";
   static String get cancelride => _locale?.cancelride ?? "cancelride";
+  static String get fullname => _locale?.fullname ?? "fullname";
+  static String get enterfullname => _locale?.enterfullname ?? "enterfullname";
+  static String get phonenumber => _locale?.phonenumber ?? "phonenumber";
+  static String get enterphonenumber => _locale?.enterphonenumber ?? "enterphonenumber";
 }

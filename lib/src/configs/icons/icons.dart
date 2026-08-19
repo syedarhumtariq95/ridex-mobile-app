@@ -64,6 +64,7 @@ class CustomIconsPath {
   static const String location = 'location.svg';
   static const String work = 'work.svg';
   static const String mall = 'mall.svg';
+  static const String phone = 'phone.svg';
 
   static String get calendarPath =>
       '$folderAssets/$folderIcons/$calendar';
@@ -103,4 +104,7 @@ class CustomIconsPath {
 
   static String get mallPath =>
       '$folderAssets/$folderIcons/$mall';
+
+  static String get phonePath =>
+      '$folderAssets/$folderIcons/$phone';
 }
