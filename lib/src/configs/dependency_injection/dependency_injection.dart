@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:ridex_mobile_app/src/ui/blocs/authentication/authentication_bloc.dart';
 import '../theme/themes/themes_model/theme_bloc/theme_bloc.dart';
 import 'navigation_service.dart';
 
@@ -19,5 +20,6 @@ class DI {
     i.registerLazySingleton(() => NavigationService());
     // Register the ThemeBloc as a lazy singleton.
     i.registerLazySingleton(() => ThemeBloc());
+    i.registerLazySingleton(() => AuthenticationBloc());
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ridex_mobile_app/src/ui/blocs/authentication/authentication_bloc.dart';
 
 import '../dependency_injection/dependency_injection.dart';
 import '../theme/themes/themes_model/theme_bloc/theme_bloc.dart';
@@ -22,7 +23,10 @@ class BlocInitializer extends StatelessWidget {
     // Use MultiBlocProvider to provide multiple BLoCs to the widget tree.
     return MultiBlocProvider(
       // Define the list of BlocProviders.
-      providers: [BlocProvider(create: (context) => DI.i<ThemeBloc>())],
+      providers: [
+        BlocProvider(create: (context) => DI.i<ThemeBloc>()),
+        BlocProvider(create: (context) => DI.i<AuthenticationBloc>()),
+      ],
       // The child widget that will have access to the BLoCs.
       child: child,
     );

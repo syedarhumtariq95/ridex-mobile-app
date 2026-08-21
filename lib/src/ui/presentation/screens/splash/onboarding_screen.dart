@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ridex_mobile_app/src/configs/app/fonts_configs.dart';
 import 'package:ridex_mobile_app/src/configs/button/custom_button.dart';
+import 'package:ridex_mobile_app/src/configs/dependency_injection/dependency_injection.dart';
 import 'package:ridex_mobile_app/src/configs/icons/icons.dart';
+import 'package:ridex_mobile_app/src/configs/router/routes.dart';
+import 'package:ridex_mobile_app/src/configs/router/screen_navigation_service.dart';
+import 'package:ridex_mobile_app/src/configs/texts/texts.dart';
 import 'package:ridex_mobile_app/src/configs/theme/theme_colors.dart';
 
-import '../../../../configs/app/fonts_configs.dart';
-import '../../../../configs/button/custom_button_second.dart';
-import '../../../../configs/router/routes.dart';
-import '../../../../configs/router/screen_navigation_service.dart';
-import '../../../../configs/texts/texts.dart';
+import '../../../blocs/authentication/authentication_bloc.dart';
 import '../../../generics/widgets/text/custom_text.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -42,6 +43,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   ];
 
   @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -63,9 +70,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     CustomIcons(
                       iconPath: onboardingData[index]["image"]!,
                     ),
-
                     SizedBox(height: 0.06.sh),
-
                     CustomText(
                       onboardingData[index]["title"]!,
                       style: TextStyle(
@@ -75,9 +80,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-
                     SizedBox(height: 0.03.sh),
-
                     CustomText(
                       onboardingData[index]["subtitle"]!,
                       style: TextStyle(
@@ -101,9 +104,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 width: currentPage == index ? 12 : 8,
                 height: 0.01.sh,
                 decoration: BoxDecoration(
-                  color: currentPage == index
-                      ? Colors.green
-                      : Colors.grey,
+                  color: currentPage == index ? Colors.green : Colors.grey,
                   borderRadius: BorderRadius.circular(10.r),
                 ),
               ),
@@ -119,14 +120,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             onPressed: () {
               if (currentPage < onboardingData.length - 1) {
                 _pageController.nextPage(
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInOut,
                 );
+              } else {
+                // Mark onboarding complete in repository
+                DI.i<AuthenticationBloc>().repository.setOnboardingCompleted();
+                ScreenNavigationService.navigationPush(
+                  CustomRouter.chooseAccountTypeScreenRouteName,
+                  replacement: true,
+                );
               }
-              ScreenNavigationService.navigationPush(
-                CustomRouter.chooseAccountTypeScreenRouteName,
-                replacement: false,
-              );
             },
           ),
           SizedBox(height: 0.1.sh),
