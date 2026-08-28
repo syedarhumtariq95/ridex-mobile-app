@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:ridex_mobile_app/src/configs/app/fonts_configs.dart';
 import 'package:ridex_mobile_app/src/configs/button/custom_button.dart';
 import 'package:ridex_mobile_app/src/configs/button/custom_button_second.dart';
@@ -33,20 +34,57 @@ class _SplashScreenState extends State<SplashScreen> {
     DI.i<AuthenticationBloc>().add(CheckSavedUserSessionRequested());
   }
 
+  /// Driver
+  Future<void> _navigateDriverBasedOnStatus(String userId) async {
+    try {
+      final response = await DI.i<SupabaseClient>()
+          .from('driver_details')
+          .select('driver_id, cnic_front_url')
+          .eq('driver_id', userId)
+          .maybeSingle();
+
+      if (!mounted) return;
+
+      if (response == null) {
+        // Vehicle details
+        ScreenNavigationService.navigationPush(
+          CustomRouter.driverDetailScreenRouteName,
+          replacement: true,
+        );
+      } else if (response['cnic_front_url'] == null) {
+        // Documents upload missing hain -> Documents Upload Screen
+        ScreenNavigationService.navigationPush(
+          CustomRouter.documentUploadScreenRouteName,
+          replacement: true,
+        );
+      } else {
+        // Flow fully completed hai -> Direct Dashboard!
+        ScreenNavigationService.navigationPush(
+          CustomRouter.driverDashboardScreenRouteName,
+          replacement: true,
+        );
+      }
+    } catch (e) {
+      print("DEBUG_SPLASH_ROUTING_ERROR: $e");
+      // Safety fallback to Dashboard
+      ScreenNavigationService.navigationPush(
+        CustomRouter.driverDashboardScreenRouteName,
+        replacement: true,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocListener<AuthenticationBloc, AuthenticationState>(
         bloc: DI.i<AuthenticationBloc>(),
-        listener: (context, state) {
+        listener: (context, state) async {
           if (state is UserLoginSuccess) {
-            // Check user role and route accordingly
             final role = state.user.role;
             if (role == 'driver') {
-              ScreenNavigationService.navigationPush(
-                CustomRouter.driverDetailScreenRouteName,
-                replacement: true,
-              );
+              // Automatic DB verification route check
+              await _navigateDriverBasedOnStatus(state.user.id);
             } else {
               ScreenNavigationService.navigationPush(
                 CustomRouter.homeScreenRouteName,

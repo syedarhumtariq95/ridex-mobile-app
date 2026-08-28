@@ -1,11 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ridex_mobile_app/src/configs/images/images.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../../../configs/dependency_injection/dependency_injection.dart';
+import '../../../../configs/router/routes.dart';
 import '../Driver/screens/driverProfileScreen/widgets/profile_menu_item_widget.dart';
 import 'widgets/user_profile_header_widget.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
+
+  /// Handles Supabase auth logout and clears navigation stack
+  Future<void> _handleLogout(BuildContext context) async {
+    try {
+      // 1. Sign out from Supabase Auth Session
+      await DI.i<SupabaseClient>().auth.signOut();
+
+      if (!context.mounted) return;
+
+      // 2. Clear entire navigation stack and navigate to ChooseAccountTypeScreen
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        CustomRouter.chooseAccountTypeScreenRouteName,
+            (route) => false,
+      );
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Logout Failed: $e')),
+        );
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
